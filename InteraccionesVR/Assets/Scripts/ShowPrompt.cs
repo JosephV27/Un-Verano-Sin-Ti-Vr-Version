@@ -7,15 +7,16 @@ public class ShowPrompt : MonoBehaviour
 {
     public Canvas Prompt;
     
-    void OnTriggerEnter(Collider ObjectEntering) {
-        Debug.Log(ObjectEntering.gameObject.name);
-        Debug.Log(ObjectEntering.tag);
+    void OnTriggerStay(Collider ObjectEntering) {
         if(ObjectEntering.tag == "Player") {
+            Debug.Log("PLAYER ENTERING");
             Prompt.enabled = true;
         }
     }
-    void onTriggerExit(Collider ObjectLeaving) {
+
+    void OnTriggerExit(Collider ObjectLeaving) {
         if(ObjectLeaving.tag == "Player") {
+            Debug.Log("PLAYER LEAVING");
             Prompt.enabled = false;
         }
     }
