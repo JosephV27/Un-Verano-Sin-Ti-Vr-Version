@@ -8,6 +8,8 @@ public class ShowPrompt : MonoBehaviour
     public Canvas Prompt;
     
     void OnTriggerEnter(Collider ObjectEntering) {
+        Debug.Log(ObjectEntering.gameObject.name);
+        Debug.Log(ObjectEntering.tag);
         if(ObjectEntering.tag == "Player") {
             Prompt.enabled = true;
         }
