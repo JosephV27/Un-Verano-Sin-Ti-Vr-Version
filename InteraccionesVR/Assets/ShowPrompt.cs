@@ -17,5 +17,4 @@ public class ShowPrompt : MonoBehaviour
             Prompt.enabled = false;
         }
     }
-    }
 }
